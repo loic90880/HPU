@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Interface de démonstration de connexion HPU VIP.">
+  <title>Login – HPU VIP Demo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+    <section class="login-card" aria-labelledby="title">
+      <div class="brand-mark" aria-hidden="true">HPU<span>VIP</span></div>
+      <p class="eyebrow">MEMBER ACCESS</p>
+      <h1 id="title">Welcome Back</h1>
+      <p class="subtitle">Sign in to continue to your account</p>
+
+      <form id="login-form" novalidate>
+        <label for="username">Username</label>
+        <input id="username" name="username" type="text"
+               placeholder="Enter your username" autocomplete="off" required>
+
+        <label for="password">Password</label>
+        <div class="password-wrap">
+          <input id="password" name="password" type="password"
+                 placeholder="Enter your password" autocomplete="new-password" required>
+          <button class="toggle" id="toggle-password" type="button"
+                  aria-label="Afficher le mot de passe">Show</button>
+        </div>
+
+        <div class="form-row">
+          <label class="remember"><input type="checkbox" id="remember"> <span>Remember me</span></label>
+          <a href="#" id="forgot-link">Forgot password?</a>
+        </div>
+
+        <p class="message" id="message" role="status" aria-live="polite"></p>
+        <button class="submit" type="submit" id="submit-button">LOGIN <span aria-hidden="true">→</span></button>
+      </form>
+      <p class="demo-note">DEMO INTERFACE · No real authentication</p>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
